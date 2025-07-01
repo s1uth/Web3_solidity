@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
 contract ERC20 {
@@ -11,10 +12,10 @@ contract ERC20 {
     string public ERC_symbol;
     uint8 public ERC_decimals;
 
-    constructor(string memory name, string memory symbol, uint8 decimals){
-        ERC_name = name;
-        ERC_symbol = symbol;
-        ERC_decimals = decimals;
+    constructor(string memory name_, string memory symbol_, uint8 decimal_){
+        ERC_name = name_;
+        ERC_symbol = symbol_;
+        ERC_decimals = decimal_;
     }
 
     //토큰 이름을 반환
