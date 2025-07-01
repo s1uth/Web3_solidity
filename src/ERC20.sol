@@ -17,6 +17,7 @@ contract ERC20 {
         ERC_symbol = symbol_;
         ERC_decimals = decimal_;
         ERC_total = 10000000000;
+        BalanceOf[msg.sender] = ERC_total;
     }
 
     // 토큰 생성
