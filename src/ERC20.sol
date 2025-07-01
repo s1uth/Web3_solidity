@@ -16,6 +16,20 @@ contract ERC20 {
         ERC_name = name_;
         ERC_symbol = symbol_;
         ERC_decimals = decimal_;
+        ERC_total = 10000000000;
+    }
+
+    // 토큰 생성
+    function _mint(uint _value) external {
+        BalanceOf[msg.sender] += _value;
+        ERC_total += _value;
+        emit Transfer(address(0), msg.sender, _value);
+    }
+    // 토큰 소각
+    function burn(uint _value) external {
+        BalanceOf[msg.sender] -= _value;
+        ERC_total -= _value;
+        emit Transfer(msg.sender, address(0), _value);
     }
 
     //토큰 이름을 반환
